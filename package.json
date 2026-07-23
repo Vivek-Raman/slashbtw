@@ -1,7 +1,7 @@
 {
   "name": "dev.vivekraman.slashbtw",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": {
     "name": "Vivek Raman",
     "email": "me@vivekraman.dev"
@@ -45,7 +45,7 @@
   },
   "build": {
     "appId": "dev.vivekraman.slashbtw",
-    "productName": "Slash BTW",
+    "productName": "slashbtw",
     "files": [
       "dist/**/*",
       "electron/**/*",
