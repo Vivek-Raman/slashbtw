@@ -144,7 +144,7 @@ function AISettingsPanel() {
               <Input
                 id="api-key"
                 name="apiKey"
-                type="text"
+                type="password"
                 autoComplete="off"
                 required
                 spellCheck={false}
