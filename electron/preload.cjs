@@ -1,5 +1,8 @@
-const { contextBridge } = require("electron");
+const { contextBridge, ipcRenderer } = require("electron");
 
 contextBridge.exposeInMainWorld("electron", {
-  // platform: process.platform,
+  settings: {
+    getAI: () => ipcRenderer.invoke("settings:ai:get"),
+    setAI: (settings) => ipcRenderer.invoke("settings:ai:set", settings),
+  },
 });
