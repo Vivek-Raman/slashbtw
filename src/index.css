@@ -354,6 +354,7 @@
 .flow-conversation-card {
   --card-accent: #49504a;
   --card-wash: #e5e3dc;
+  position: relative;
   width: 286px;
   overflow: hidden;
   border: 1px solid rgba(43, 46, 42, 0.2);
