@@ -1,8 +1,15 @@
 import { ArrowRight, Monitor } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
+import CanvasPage from '@/components/CanvasPage'
 
 function App() {
+  const pathname = window.location.pathname.replace(/\/+$/, '') || '/'
+
+  if (pathname === '/canvas') {
+    return <CanvasPage />
+  }
+
   return (
     <main className="flex min-h-screen items-center justify-center bg-muted/40 p-6">
       <section className="w-full max-w-xl rounded-xl border bg-card p-8 text-card-foreground shadow-sm">
