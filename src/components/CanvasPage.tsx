@@ -4,7 +4,6 @@ import {
   Handle,
   Position,
   ReactFlow,
-  type CoordinateExtent,
   type Edge,
   type Node,
   type NodeProps,
@@ -77,11 +76,6 @@ const edges: Edge[] = [
   },
 ]
 
-const canvasExtent: CoordinateExtent = [
-  [-160, -160],
-  [1260, 720],
-]
-
 function ConversationCard({ data }: NodeProps<ConversationNode>) {
   return (
     <article className="flow-conversation-card" data-tone={data.tone}>
@@ -145,7 +139,6 @@ function CanvasPage() {
           fitViewOptions={{ padding: 0.22, maxZoom: 0.9 }}
           minZoom={0.6}
           maxZoom={1.15}
-          translateExtent={canvasExtent}
           nodesDraggable={false}
           nodesConnectable={false}
           elementsSelectable={false}
