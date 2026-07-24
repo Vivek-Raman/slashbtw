@@ -142,7 +142,7 @@ function CanvasPage() {
           nodesDraggable={false}
           nodesConnectable={false}
           elementsSelectable={false}
-          proOptions={{ hideAttribution: true }}
+          // proOptions={{ hideAttribution: true }} // Requires React Flow Pro license
         >
           <Background gap={18} size={1} color="rgba(48, 52, 46, 0.2)" />
           <Controls showInteractive={false} />
