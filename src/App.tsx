@@ -1,17 +1,13 @@
-import { useState } from 'react'
+import { Navigate, Route, Routes } from 'react-router-dom'
 
-import { ChatPage } from '@/pages/chat/chat-page'
-import { SettingsPage } from '@/pages/settings/settings-page'
-
-type AppView = 'chat' | 'settings'
+import CanvasPage from '@/components/CanvasPage'
 
 function App() {
-  const [view, setView] = useState<AppView>('chat')
-
-  return view === 'chat' ? (
-    <ChatPage onOpenSettings={() => setView('settings')} />
-  ) : (
-    <SettingsPage onBackToChat={() => setView('chat')} />
+  return (
+    <Routes>
+      <Route path="/" element={<CanvasPage />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   )
 }
 
